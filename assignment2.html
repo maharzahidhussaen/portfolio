@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .body{
+      background-color: rgb(197, 192, 192);
+      font-family: Arial, Helvetica, sans-serif;
+     }
+.div{
+    text-align: center;
+    background-color: white;
+   border-radius: 20px;
+   margin: 0 auto;
+   width: 300px;
+   height: 550px;
+   margin-top: 30px; 
+   padding: 15px;
+}
+.img{
+ border-radius: 50px;
+ width: 100px;
+ height: 100px; 
+}
+.h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.p{
+    color: gray;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.k{
+    font-size: 15px;
+}
+.butn{
+background-color: black;
+border-radius: 8px;
+color: white;
+padding: 8px 10px;
+cursor: pointer;
+}
+.ul{
+    text-align: left;
+    margin-left: 85px;
+}
+.a{
+text-decoration: none;
+}
+</style>
+</head>
+<body class="body">
+    <div class="div">
+        <img class="img" src="mahar.jpeg" alt="">
+        <h1 class="h1">Zahid Hussain</h1>
+        <p class="p">Web Developer in Making</p><br>
+        <p class="k">| am learning web development and building <br>
+        my skills in HTML, CSS and JavaScript</p>
+        <h2>My Skills</h2>
+        <ul class="ul">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul><br>
+        <a class="a" href="visit my portfolio">Visit My Portfolio</a><br><br>
+        <button onclick="ok()" class="butn">Show Message</button>
+        <p id="demo"></p>
+    </div>
+    <script>
+        function ok() {
+            document.getElementById("demo").innerHTML = "Hello, Welcome to my portfolio!";
+            document.getElementById("demo").style.color="blue"
+        }
+    </script>
+</body>
+</html>

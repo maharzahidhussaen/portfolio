@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: chocolate;
+        }
+        h1{
+            text-align: center;
+        }
+        .outline{
+        text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1><span style="color: rgb(217, 11, 11);">Student</span> Grade <span style="color: blue;">Marks</span></h1>
+<div class="container">
+    <small style="display: block; width: 250px; margin: 0 auto; background-color: rgb(187, 186, 186); border-left: 5px solid blue; padding: 10px; border-radius: 0px 10px 10px 0px; font-weight: bold; font-size: 20px;">Write your marks here:-</small>
+    <input type="text" name="" id="marks" style="outline: none; border: 1px solid rgb(133, 128, 128); border-radius: 5px; margin: 20px auto; width: 250px; height: 25px; display: block;">
+    <button ondblclick="check()" style="outline: none; border: 1px solid rgb(186, 177, 177); border-radius: 5px; margin: 20px auto; height: 25px; width: 250px;">Calculate</button>
+    <div id="result-block" style="display: none; width: 300px; padding: 10px; text-align: center; margin: 0 auto; border-left: 5px solid blue; border-radius: 10px; background-color: aliceblue;">
+        <h2> Your Marks <span id="result"></span></h2>
+    </div>
+    </div>
+    <script>
+        function check(){
+            document.getElementById('result-block').style.display='block'
+            let marks = document.getElementById('marks').value
+            marks =Number(marks)
+
+            if (marks >=100){
+            document.getElementById('result').innerHTML="<span style='color:green'>A</span>"
+              }
+
+             else  if (marks >=90){
+                document.getElementById('result').innerHTML="<span style='color:green'>B</span>"
+            }
+
+            else if (marks >=80){
+            document.getElementById('result').innerHTML="<span style='color:green'>C</span>"
+            }
+
+            else if (marks >=70){
+                document.getElementById('result').innerHTML="<span style='color:green'>D</span>"
+            }
+
+            else if (marks >=60){
+                document.getElementById('result').innerHTML="<span style='color:green'>E</span>"           
+             }
+
+            else {
+                document.getElementById('result').innerHTML="<span style='color:red'>FAIL</span>"
+            }
+        }
+    </script>
+</body>
+</html>

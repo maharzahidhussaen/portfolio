@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 25px;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            width: 800px;
+            height: 300px;
+            border-radius: 15px;
+            /* box-shadow: 0 4px 10px #162be2; */
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        #count {
+            font-size: 50px;
+            margin: 20px;
+            color: #0b07ee;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .increase {
+            background-color: green;
+            width:90px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .decrease {
+            background-color: red;
+            width: 90px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .reset {
+            background-color: #5e6065;
+            width: 70px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .header{
+            padding: 10px;
+            background-color: #222222;
+            color: white;
+            width: 1330px;
+            height: 125px;
+        }
+
+        .h1{
+            color: white;
+        }
+
+        .h2{
+            color: blue;
+            text-align: left;
+        }
+
+        .p {
+           text-align: left;
+        }
+    </style>
+</head>
+<body>
+<header  class="header">
+    <h1 class="h1">Assignment 4</h1>
+    <p>Simple Counter App | HTML, CSS & JavaScript</p>
+</header>
+<br><br>
+    <div class="container">
+        <h2 class="h2">Part: Counter App</h2>
+<p class="p">Use the buttons to increase, decrease, or reset the Counter value.</p>
+<div class="div">
+<p>Current Count</p>
+        <div id="count">0</div>
+        <button class="increase" onclick="increase()">
+           Increase+
+        </button>
+        <button class="decrease" onclick="decrease()">
+           Decrease-
+        </button>
+        <button class="reset" onclick="reset()">
+            Reset
+        </button>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+
+        function increase() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        function decrease() {
+            count--;
+            document.getElementById("count").innerText = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("count").innerText = count;
+        }
+    </script>
+</body>
+</html>
